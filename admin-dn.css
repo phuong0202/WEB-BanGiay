@@ -1,0 +1,131 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+  @import url(http://fonts.googleapis.com/css?family=Maven+Pro);
+  /* zocial */
+  [class*="entypo-"]:before {
+    font-family: 'entypo', sans-serif;
+  }
+   
+  *,
+  *:before,
+  *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Maven Pro', sans-serif;
+  }
+   
+  body {
+    /* background: #4f6d82; */
+    background: url(Images/bg.jpg);
+    z-index: 0;
+  }
+   
+  h2 {
+    color: #95a5a6;
+    margin-left: 20px;
+    font-size: 30px;
+    margin-top: -10px;
+    font-weight: normal;
+    display: inline-block;
+  }
+  h3
+  {
+      text-align: center;
+      font-size: 4em;
+      z-index: 1;
+      color: red;
+  }
+   
+  .formCont {
+    width: 500px;
+    margin: 50px auto;
+  }
+   
+  form {
+    background: #2c3e50;
+    padding: 20px;
+  }
+   
+  input {
+    border: 0;
+    padding: 10px;
+  }
+   
+  input:focus {
+    outline-color: rgba(0, 0, 0, 0);
+  }
+   
+  .inputForm {
+    width: 100%;
+    background: white;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+   
+  .prefix {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 100%;
+    padding: 10px;
+    background: #dedee0;
+    text-align: center;
+    color: #777777;
+  }
+   
+  .sufix {
+    display: inline-block;
+    position: relative;
+    float: right;
+    width: 50px;
+    height: 100%;
+    padding: 10px;
+    background: #dedee0;
+    text-align: center;
+    color: #777777;
+  }
+   
+  .brTop {
+    border-radius: 3px 3px 0px 0px;
+    height: 5px;
+    background: #16a085;
+    background: -moz-linear-gradient(-45deg, #16a085 0%, #1abc9c 40%, #2980b9 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #16a085), color-stop(40%, #1abc9c), color-stop(100%, #2980b9));
+    background: -webkit-linear-gradient(-45deg, #16a085 0%, #1abc9c 40%, #2980b9 100%);
+    background: -o-linear-gradient(-45deg, #16a085 0%, #1abc9c 40%, #2980b9 100%);
+    background: -ms-linear-gradient(-45deg, #16a085 0%, #1abc9c 40%, #2980b9 100%);
+    background: linear-gradient(135deg, #16a085 0%, #1abc9c 40%, #2980b9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#16a085', endColorstr='#2980b9',GradientType=1 );
+  }
+  
+  .triangle {
+    position: relative;
+    top: -21px;
+    left: 50px;
+    margin: 0;
+    height: 0;
+    width: 0;
+    border-top: 15px solid #2c3e50;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid transparent;
+    transform: rotate(225deg);
+  }
+   
+  .flRight {
+    float: right;
+    margin-right: 25px;
+    text-decoration: underline;
+    color: #95a5a6;
+    cursor: pointer;
+  }
+  .dn
+  {
+    cursor: pointer;
+    outline: none;
+    background: none;
+    border:none;
+    width: auto;
+    size: 200px;
+    font-size: 2em;
+    color: red;
+}

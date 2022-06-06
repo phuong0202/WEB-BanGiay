@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin-Index</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="Style.css">
+        <link rel="stylesheet" type="text/css" href="qlsp.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script src="admin.js"></script>
+        <script>
+          $(function(){
+            $('#text').keyup(function(e){
+                if(e.keyCode=='13'){
+                  search();
+                }       
+            })
+          })
+      </script>
+        </head>
+    <body>
+       <!-- <------------------trang chu-------------------> 
+        <!-- <------------------top-------------------> 
+        <div id="top" class="top">
+                <div class="tieude">
+                    <div class="louser">
+                        <a href="#" onclick="openDN()"><i class="fa fa-user"></i></a>
+                    </div>
+                    <a class="dn hvr-underline-from-center" id="a" href="admin.html" > ĐĂNG XUẤT</a>
+                    <a class="dn1 hvr-underline-from-center " id="b" href="#dangnhap" >CHÀO ADMIN</a>
+                  <div> <a href="#" onclick="trangchu()"><img src="Images\xx.png"></a></div>
+                  <div class="img2"><a href="#" onclick="trangchu()"><img src="Images\xyz.png"></a></div>
+                  <div class="topnav">
+                    <div class="left">
+                      <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <div class="left1">
+                        <a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
+                    </div>
+                    <div class="left2">
+                        <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                    </div>
+                  </div>        
+                  <div class="search"> <input type="search" placeholder="Tìm Kiếm..." id="text">
+                    <button type="button" onclick="search()"><i class="fa fa-search"></i></button>
+                    <script src="style.js"></script>
+                  </div>
+                  <div class="giohang">
+                    <a href="#giohang" onclick="giohang()"><img src="Images\giohang.png"></a>
+                  </div>
+                </div>
+           <div class="menu">
+             <div class="dropdown">
+               <div class="danhmuc"><a  href="index.html">TRANG CHỦ</a>
+             </div> 
+             </div>
+             <div class="dropdown">
+           <div class="nut"> <a href="qlsp.html" >QUẢN LÝ SẢN PHẨM</a>
+        </div></div>
+        <div class="dropdown">
+            <div class="nut"><a href="qlhd.html">QUẢN LÝ ĐƠN HÀNG</a>
+                </div>
+        </div>
+        <div class="dropdown">
+            <div class="nut"><a  href="qlnd.html">QUẢN LÝ NGƯỜI DÙNG</a>
+                </div>
+        </div>   
+        <div class="dropdown">
+          <div class="nut"><a  href="thongke.html">THỐNG KÊ</a>
+              </div>
+      </div> 
+      </div>
+      <a href="qlsp.html"><h2>QUẢN LÝ SẢN PHẨM</h2></a>
+      <button class="nutthemsp" id="nutthemsp"> <a href="#themsanpham" onclick="themsp()">&#43; THÊM SẢN PHẨM MỚI</a></button>
+        <div class="quanlysanpham" id="thongtinsp">
+                <p id="kq" class="kq"></p>
+              <div class="card2" id="1">
+                <img  src="Images/nb4.JPG" alt="lon1" >
+                <h1>Sen đá Thái</h1>
+                <p class="price">45.000 VNĐ</p>
+                <p><button onclick="suasp('Sen đá Thái','45.000 VNĐ','Images/nb4.JPG')" >Sửa </button></p>
+                <p><button onclick="xoasp()">Xóa</button></p>
+              </div> 
+              <div class="card2" id="2">
+                <img src="Images/lon2.JPG" alt="lon2" >
+                <h1>Sen đá hồng bạch</h1>
+                <p class="price">45.000 VNĐ</p>
+                <p><button onclick="suasp('Sen đá hồng bạch','45.000 VNĐ','Images/lon2.JPG')" >Sửa </button></p>
+                <p><button onclick="xoasp()">Xóa</button></p>
+              </div>
+              <div class="card2" id="3">
+                <img src="Images/lon13.JPG" alt="lon13" >
+                <h1>Sen đá Đô la</h1>
+                <p class="price">45.000 VNĐ</p>
+                <p><button onclick="suasp('Sen đá Đô la','45.000 VNĐ','Images/lon13.JPG')" >Sửa </button></p>
+                <p><button onclick="xoasp()">Xóa</button></p>
+              </div>
+              <div class="card2" id="4">
+                <img src="Images/lon12.JPG" alt="lon5" >
+                <h1>Sen đá nâu đất</h1>
+                <p class="price">45.000 VNĐ</p>
+                <p><button onclick="suasp('Sen đá nâu đất','45.000 VNĐ','Images/lon12.JPG')" >Sửa </button></p>
+                <p><button onclick="xoasp()">Xóa</button></p>
+              </div>
+              <div class="card2" id="5">
+                <img src="Images/lon5.JPG" alt="lon5" >
+                <h1>Sen đá Thái xanh</h1>
+                <p class="price">45.000 VNĐ</p>
+                <p><button onclick="suasp('Sen đá Thái xanh','45.000 VNĐ','Images/lon5.JPG')" >Sửa </button></p>
+                <p><button onclick="xoasp()">Xóa</button></p>
+                </a>
+              </div>
+              <div class="card2" id="6">
+                <img src="Images/lon6.JPG" alt="lon6" >
+                <h1>Sen đá viền hồng</h1>
+                <p class="price">45.000 VNĐ</p>
+                <p><button onclick="suasp('Sen đá viền hồng','45.000 VNĐ','Images/lon6.JPG')" >Sửa </button></p>
+                <p><button onclick="xoasp()">Xóa</button></p>
+                </a>
+              </div>
+              <div class="card2" id="7">
+                <img src="Images/lon7.JPG" alt="lon7" >
+                <h1>Sen đá viền lửa</h1>
+                <p class="price">45.000 VNĐ</p>
+                <p><button onclick="suasp('Sen đá viền lửa','45.000 VNĐ','Images/lon7.JPG')" >Sửa </button></p>
+                <p><button onclick="xoasp()">Xóa</button></p>
+              </div>
+                      <div class="card2" id="8" >
+                       
+                        <img src="Images/lon10.JPG" alt="lon5" >
+                        <h1>Sen đá bánh bao</h1>
+                        <p class="price">45.000 VNĐ</p>
+                        <p><button onclick="suasp('Sen đá bánh bao','45.000 VNĐ','Images/lon10.JPG')" >Sửa </button></p>
+                <p><button onclick="xoasp()">Xóa</button></p>
+                        </a>
+                      </div>
+                      <div class="card2 " id="9">
+                        <img  src="Images/nho1.JPG" alt="nho1" >
+                        <h1>Sen đá chuỗi ngọc</h1>
+                        <p class="price">15.000 VNĐ</p>
+                        <p><button onclick="suasp('Sen đá chuỗi ngọc','15.000 VNĐ','Images/nho1.JPG')" >Sửa </button></p>
+                        <p><button onclick="xoasp()">Xóa</button></p>
+                        </a>
+                      </div> 
+                      <div class="card2" id="10">
+                       
+                        <img src="Images/nho4.JPG" alt="lon5" >
+                        <h1>Sen đá hàm cá mập</h1>
+                        <p class="price">15.000 VNĐ</p>
+                        <p><button onclick="suasp('Sen đá hàm cá mập','15.000 VNĐ','Images/nho4.JPG')" >Sửa </button></p>
+                <p><button onclick="xoasp()">Xóa</button></p>
+                      </div>
+                      <div class="card2" id="11">
+                       
+                        <img src="Images/nho5.JPG" alt="lon5" >
+                        <h1>Sen đá nâu</h1>
+                        <p class="price">15.000 VNĐ</p>
+                        <p><button onclick="suasp('Sen đá nâu','15.000 VNĐ','Images/nho5.JPG')" >Sửa </button></p>
+                <p><button onclick="xoasp()">Xóa</button></p>
+                        
+                      </div>  
+                      <div class="card2" id="12">
+                       
+                        <img src="Images/nho7.JPG" alt="lon7" >
+                        <h1>Sen đá tứ phương</h1>
+                        <p class="price">15.000 VNĐ</p>
+                        <p><button onclick="suasp('Sen đá tứ phương','15.000 VNĐ','Images/nho7.JPG')" >Sửa </button></p>
+                        <p><button onclick="xoasp()">Xóa</button></p>
+                        
+                      </div>
+                      <div class="card2" id="13">
+                       
+                        <img  src="Images/nho17.JPG" alt="lon1" >
+                        <h1>Sen đá dù</h1>
+                        <p class="price">15.000 VNĐ</p>
+                        <p><button onclick="suasp('Sen đá dù','15.000 VNĐ','Images/nho17.JPG')" >Sửa </button></p>
+                <p><button onclick="xoasp()">Xóa</button></p>
+                       
+                      </div>   
+                      <div class="card2" id="14">
+                       
+                        <img src="Images/nho19.JPG" alt="lon13" >
+                        <h1>Sen đá cánh hoa hồng</h1>
+                        <p class="price">15.000 VNĐ</p>
+                        <p><button onclick="suasp('Sen đá cánh hoa hồng','15.000 VNĐ','Images/nho19.JPG')" >Sửa </button></p>
+                <p><button onclick="xoasp()">Xóa</button></p>
+                       
+                      </div>
+                      <div class="card2" id="15">
+                        
+                        <img src="Images/nho10.JPG" alt="lon11" >
+                        <h1>Sen đá lá tim</h1>
+                        <p class="price">15.000 VNĐ</p>
+                        <p><button onclick="suasp('Sen đá lá tim','15.000 VNĐ','Images/nho19=0.JPG')" >Sửa </button></p>
+                        <p><button onclick="xoasp()">Xóa</button></p>
+                        
+                      </div>
+                      <div class="card2" id="16">
+                          
+                          <img  src="Images/xr9.JPG" alt="lon1" >
+                          <h1>Xương rồng tai thỏ</h1>
+                          <p class="price">15.000 VNĐ</p>
+                          <p><button onclick="suasp('Xương rồng tai thỏ','15.000 VNĐ','Images/xr9.JPG')" >Sửa </button></p>
+                <p><button onclick="xoasp()">Xóa</button></p>
+                        </div> 
+                        <div class="card2" id="17">
+                          <img  src="Images/xr1.JPG" alt="lon1" >
+                          <h1>Xương rồng móng rồng</h1>
+                          <p class="price">15.000 vnd</p>
+                          <p><button onclick="suasp('Xương rồng móng rồng','15.000 VNĐ','Images/xr1.JPG')" >Sửa </button></p>
+                          <p><button onclick="xoasp()">Xóa</button></p>
+                        </div> 
+                        <div class="card2" id="18">
+                          <img src="Images/xr2.JPG" alt="non2" >
+                          <h1>Xương rồng bụi</h1>
+                          <p class="price">110.000 VNĐ</p>
+                          <p><button onclick="suasp('Xương rồng bụi','110.000 VNĐ','Images/xr2.JPG')" >Sửa </button></p>
+                <p><button onclick="xoasp()">Xóa</button></p>
+                        </div>
+                        <div class="card2" id="19">
+                          <img src="Images/xr3.JPG" alt="lon13" >
+                          <h1>Xương rồng bánh sinh nhật</h1>
+                          <p class="price">65.000 VNĐ</p>
+                          <p><button onclick="suasp('Xương rồng bánh sinh nhật','65.000 VNĐ','Images/xr3.JPG')" >Sửa </button></p>
+                          <p><button onclick="xoasp()">Xóa</button></p>
+      
+                        </div>
+                        <div class="card2" id="20">
+                          <img src="Images/xr4.JPG" alt="lon5" >
+                          <h1>Xương rồng thanh sơn</h1>
+                          <p class="price">35.000 VNĐ</p>
+                          <p><button onclick="suasp('Xương rồng thanh sơn','35.000 VNĐ','Images/xr4.JPG')" >Sửa </button></p>
+                <p><button onclick="xoasp()">Xóa</button></p>
+                        </div>
+                        <div class="card2" id="21">
+                          <img src="Images/xr6.JPG" alt="lon6" >
+                          <h1>Xương rồng trứng chim</h1>
+                          <p class="price">25.000 VNĐ</p>
+                          <p><button onclick="suasp('Xương rồng trứng chim','25.000 VNĐ','Images/xr6.JPG')" >Sửa </button></p>
+                <p><button onclick="xoasp()">Xóa</button></p>
+                        </div>
+                        <div class="card2" id="22">
+                          <img src="Images/xr7.JPG" alt="lon7" >
+                          <h1>Xương rồng vàng</h1>
+                          <p class="price">65.000 VNĐ</p>
+                          <p><button onclick="suasp('Xương rồng vàng','65.000 VNĐ','Images/x76.JPG')" >Sửa </button></p>
+                <p><button onclick="xoasp()">Xóa</button></p>
+                        </div>  
+                        <div class="pagination1 ">     
+                          <a  href="#block1"  class="btn " >Back</a>            
+                          <a  href="#block1" onclick="sendalon1()" class="btn " >1</a>
+                          <a  href="#block2" onclick="sendalon2()" class="btn" >2</a>
+                          <a  href="#block1"  class="btn " >Next</a>
+                        </div>
+                      </div>
+              <!-- ---------------them sp-------------- -->
+        
+        <div class="themsp" id="themsp">
+          
+          <form class="form-style-71" id="f7">
+            <ul>
+              <li>
+                <label for="name">Tên</label>
+                <input type="text" name="name" maxlength="100">
+                <span>Nhập tên sản phẩm</span>
+              </li>
+              <li>
+                <label for="email">Giá</label>
+                <input type="text" name="gia" maxlength="100">
+                <span>Nhập giá của sản phẩm</span>
+              </li>
+              <li>
+                <label for="url">Hình ảnh mới</label>
+                <input type="file" name="myFile">
+                <span>Chọn hình ảnh cho sản phẩm</span>
+              </li>
+              <li>
+                <label for="bio">Mô tả</label>
+                <textarea name="bio" onkeyup="adjust_textarea(this)"></textarea>
+                <span>Mô tả sản phẩm</span>
+              </li>
+              <li>
+                <input type="submit" value="Hoàn tất thêm">
+              </li>
+            </ul>
+          </form>
+        </div>
+        <!-- ---------------sua sp-------------- -->
+        <div class="suasp" id="suasp">
+          <form class="form-style-71" id="f77">
+            <ul>
+              <li>
+                <label for="name" id="ten" >Tên sản phẩm</label>
+                <input type="text"  maxlength="100" >
+                <span>Nhập tên cần sửa</span>
+              </li>
+              <li>
+                <label for="email" id="gia">Giá</label>
+                <input type="text" name="gia" maxlength="100" >
+                <span>Nhập giá mới</span>
+              </li>
+              <li>
+                <label for="url" id="hinh"> Hình ảnh</label>
+                <span>Hình hiện tại</span>
+              </li>
+              <li>
+                <label for="url" > Hình ảnh</label>
+                <input type="file" name="myFile" >
+                <span>Chọn hình ảnh thay thế</span>
+              </li>
+              <li>
+                <label for="bio">Mô tả</label>
+                <textarea name="bio" onkeyup="adjust_textarea(this)"></textarea>
+                <span>Mô tả sản phẩm thay thế</span>
+              </li>
+              <li>
+                <input type="submit" value="Cập nhật">
+              </li>
+            </ul>
+          </form>
+        </div>
+
+        
+</body>
+</html>
